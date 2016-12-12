@@ -18,3 +18,15 @@ class IAdjustSemanticPublish(zope.interface.Interface):
         title=_('Adjust last published with semantic change'),
         required=False,
         max=zeit.cms.interfaces.MAX_PUBLISH_DATE)
+
+class IBannerContentDisplay(zope.interface.Interface):
+    """Schema for admin form to set option for hiding add banner in content.
+
+    User with 'admin' permission should be able to set an option for hiding
+    banner adds in content.
+
+    """
+
+    banner_content_display = zope.schema.Bool(
+        title=_('Display Banner In Content'),
+        required=False)
