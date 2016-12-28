@@ -13,4 +13,5 @@
       />
   </class>
 
+  <adapter factory=".banner_content.DisplayBannerInContent" />
 </configure>
