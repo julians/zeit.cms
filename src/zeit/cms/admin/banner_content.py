@@ -22,5 +22,5 @@ class DisplayBannerInContent(object):
     @banner_content_display.setter
     def banner_content_display(self, value):
         banner_content_info = zeit.cms.content.interfaces.ICommonMetadata(
-            context)
+            self.context)
         banner_content_info.banner_content = value
