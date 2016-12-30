@@ -12,6 +12,4 @@
       permission="zeit.cms.admin.EditSemantic"
       />
   </class>
-
-  <adapter factory=".banner_content.DisplayBannerInContent" />
 </configure>

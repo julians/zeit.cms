@@ -1,4 +1,3 @@
-from zeit.cms.admin.interfaces import IBannerContentDisplay
 from zeit.cms.testcontenttype.testcontenttype import ExampleContentType
 import pytz
 import zeit.cms.content.interfaces
@@ -13,15 +12,15 @@ class TestBannerContentDisplay(zeit.cms.testing.ZeitCmsTestCase):
     def test_banner_content_has_correct_default_value(
             self):
         self.assertFalse(
-            IBannerContentDisplay(self.content).banner_content_display)
+            ICommonMetadata(self.content).banner_content)
 
-    def test_banner_content_displays_correct_stored_value(
+    def test_banner_contents_correct_stored_value(
             self):
         zeit.cms.content.interfaces.ICommonMetadata(
             self.content).banner_content = False
         self.assertFalse(
-            IBannerContentDisplay(self.content).banner_content_display)
+            ICommonMetadata(self.content).banner_content)
         zeit.cms.content.interfaces.ICommonMetadata(
             self.content).banner_content = True
         self.assertTrue(
-            IBannerContentDisplay(self.content).banner_content_display)
+            ICommonMetadata(self.content).banner_content)
