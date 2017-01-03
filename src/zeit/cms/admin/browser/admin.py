@@ -19,9 +19,6 @@ class EditFormCO(zeit.cms.browser.form.EditForm):
     form_fields = zope.formlib.form.Fields(zeit.cms.content.interfaces.ICommonMetadata).select(
         'banner_content')
 
-    def setUpWidgets(self, *args, **kw):
-        super(EditFormCO, self).setUpWidgets(*args, **kw)
-
     # Without field group it will look weird when context is an Article.
     field_groups = (gocept.form.grouped.RemainingFields(
         _('admin-field-group'), 'column-left-small'),)
